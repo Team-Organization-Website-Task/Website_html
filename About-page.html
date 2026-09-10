@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kestrel — Gooseneck Pour-Over Kettle</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,450;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --charcoal:#20211F;
+    --cream:#F6F3EC;
+    --copper:#B5652D;
+    --copper-dim:#8f4f22;
+    --slate:#5B5B54;
+    --hairline:#D8D3C4;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--charcoal);
+    font-family:'Inter', sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  h1,h2,h3,.display{
+    font-family:'Fraunces', serif;
+    font-weight:450;
+    margin:0;
+    letter-spacing:-0.01em;
+  }
+
+  a{color:inherit;}
+
+  .wrap{
+    max-width:1120px;
+    margin:0 auto;
+    padding:0 32px;
+  }
+
+  /* ---------- Nav ---------- */
+  nav{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:28px 32px;
+    max-width:1120px;
+    margin:0 auto;
+  }
+  .wordmark{
+    font-family:'Fraunces', serif;
+    font-size:1.2rem;
+    font-weight:600;
+  }
+  .nav-links{
+    display:flex;
+    gap:36px;
+    font-size:0.92rem;
+    color:var(--slate);
+  }
+  .nav-links a{text-decoration:none;}
+  .nav-links a:hover{color:var(--charcoal);}
+  .nav-buy{
+    font-size:0.92rem;
+    border:1px solid var(--charcoal);
+    padding:9px 18px;
+    text-decoration:none;
+    transition:background .18s ease, color .18s ease;
+  }
+  .nav-buy:hover{background:var(--charcoal);color:var(--cream);}
+
+  @media (max-width:720px){
+    .nav-links{display:none;}
+  }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    display:grid;
+    grid-template-columns:1.05fr 0.95fr;
+    align-items:center;
+    gap:48px;
+    padding:40px 0 80px;
+  }
+  .hero .eyebrow{
+    color:var(--copper-dim);
+    font-size:0.95rem;
+    margin-bottom:18px;
+  }
+  .hero h1{
+    font-size:clamp(2.6rem, 5vw, 4rem);
+    line-height:1.04;
+    max-width:11ch;
+  }
+  .hero p.lede{
+    font-size:1.08rem;
+    color:var(--slate);
+    max-width:38ch;
+    margin-top:24px;
+    line-height:1.6;
+  }
+  .hero-cta{
+    display:flex;
+    align-items:center;
+    gap:24px;
+    margin-top:36px;
+  }
+  .btn-primary{
+    background:var(--charcoal);
+    color:var(--cream);
+    border:none;
+    padding:14px 26px;
+    font-size:0.95rem;
+    font-family:inherit;
+    cursor:pointer;
+    text-decoration:none;
+    display:inline-block;
+    transition:background .18s ease;
+  }
+  .btn-primary:hover{background:var(--copper-dim);}
+  .price-note{font-size:0.92rem;color:var(--slate);}
+
+  .hero-art{position:relative;}
+  .hero-art svg{width:100%;height:auto;display:block;}
+
+  @media (max-width:860px){
+    .hero{grid-template-columns:1fr;padding-top:8px;}
+    .hero-art{order:-1;max-width:340px;margin:0 auto 12px;}
+  }
+
+  /* ---------- Marquee strip ---------- */
+  .strip{
+    border-top:1px solid var(--hairline);
+    border-bottom:1px solid var(--hairline);
+    padding:20px 0;
+  }
+  .strip .wrap{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:14px;
+    font-size:0.86rem;
+    color:var(--slate);
+  }
+
+  /* ---------- Section shared ---------- */
+  section{padding:88px 0;}
+  section.tight{padding:64px 0;}
+  .section-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    gap:24px;
+    margin-bottom:48px;
+    border-bottom:1px solid var(--hairline);
+    padding-bottom:24px;
+  }
+  .section-head h2{
+    font-size:2rem;
+  }
+  .section-head p{
+    color:var(--slate);
+    max-width:32ch;
+    font-size:0.95rem;
+    line-height:1.6;
+    margin:0;
+  }
+
+  /* ---------- Pour control (feature) ---------- */
+  .control-grid{
+    display:grid;
+    grid-template-columns:0.9fr 1.1fr;
+    gap:64px;
+    align-items:center;
+  }
+  @media (max-width:860px){
+    .control-grid{grid-template-columns:1fr;gap:40px;}
+  }
+
+  .dial-wrap{display:flex;justify-content:center;}
+  .dial-wrap svg{width:280px;height:280px;}
+
+  .feature-list{list-style:none;margin:0;padding:0;}
+  .feature-list li{
+    display:grid;
+    grid-template-columns:120px 1fr;
+    gap:20px;
+    padding:22px 0;
+    border-top:1px solid var(--hairline);
+  }
+  .feature-list li:last-child{border-bottom:1px solid var(--hairline);}
+  .feature-list .val{
+    font-family:'Fraunces', serif;
+    font-size:1.5rem;
+    color:var(--copper-dim);
+  }
+  .feature-list .desc h3{font-size:1.05rem;font-weight:600;margin-bottom:6px;}
+  .feature-list .desc p{margin:0;color:var(--slate);font-size:0.92rem;line-height:1.55;}
+
+  /* ---------- Build / craft section ---------- */
+  .craft{
+    background:var(--charcoal);
+    color:var(--cream);
+  }
+  .craft .section-head{border-bottom-color:#3a3b37;}
+  .craft .section-head p{color:#B9B7AC;}
+  .craft-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:1px;
+    background:#3a3b37;
+  }
+  .craft-cell{
+    background:var(--charcoal);
+    padding:36px 28px;
+  }
+  .craft-cell .num{
+    font-family:'Fraunces', serif;
+    font-size:0.95rem;
+    color:var(--copper);
+    display:block;
+    margin-bottom:14px;
+  }
+  .craft-cell h3{font-size:1.15rem;font-weight:450;margin-bottom:10px;}
+  .craft-cell p{color:#B9B7AC;font-size:0.9rem;line-height:1.6;margin:0;}
+
+  @media (max-width:720px){
+    .craft-grid{grid-template-columns:1fr;}
+  }
+
+  /* ---------- Specs table ---------- */
+  table.specs{
+    width:100%;
+    border-collapse:collapse;
+    font-size:0.95rem;
+  }
+  table.specs tr{border-top:1px solid var(--hairline);}
+  table.specs tr:last-child{border-bottom:1px solid var(--hairline);}
+  table.specs td{padding:16px 0;}
+  table.specs td:first-child{
+    color:var(--slate);
+    width:220px;
+  }
+
+  /* ---------- CTA / footer ---------- */
+  .closing{
+    text-align:left;
+    border-top:1px solid var(--hairline);
+  }
+  .closing h2{
+    font-size:clamp(2rem, 4vw, 2.8rem);
+    max-width:16ch;
+    line-height:1.12;
+  }
+  .closing-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    gap:24px;
+    flex-wrap:wrap;
+  }
+
+  footer{
+    border-top:1px solid var(--hairline);
+    padding:32px 0 48px;
+    font-size:0.85rem;
+    color:var(--slate);
+  }
+  footer .wrap{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:12px;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+  }
+
+  :focus-visible{
+    outline:2px solid var(--copper);
+    outline-offset:2px;
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wordmark">Kestrel</div>
+  <div class="nav-links">
+    <a href="#control">Temperature Control</a>
+    <a href="#craft">Craft</a>
+    <a href="#specs">Specs</a>
+  </div>
+  <a class="nav-buy" href="#buy">Buy — $128</a>
+</nav>
+
+<header class="wrap hero">
+  <div>
+    <div class="eyebrow">Gooseneck kettle for pour-over coffee</div>
+    <h1>Pour with the precision of a hand that's done it ten thousand times.</h1>
+    <p class="lede">A thin gooseneck spout and a hold-steady handle give you the slow, even pour that pulls the best out of your beans — hot water exactly where you want it, at the pace you want it.</p>
+    <div class="hero-cta">
+      <a class="btn-primary" href="#buy">Add to cart</a>
+      <span class="price-note">$128 · ships in 2 days</span>
+    </div>
+  </div>
+  <div class="hero-art" aria-hidden="true">
+    <svg viewBox="0 0 420 460" xmlns="http://www.w3.org/2000/svg">
+      <!-- kettle body -->
+      <path d="M140 180 C130 260, 130 340, 160 390 C175 415, 245 415, 260 390 C290 340, 290 260, 280 180 Z"
+            fill="none" stroke="#20211F" stroke-width="2.5"/>
+      <!-- lid -->
+      <ellipse cx="210" cy="178" rx="70" ry="14" fill="none" stroke="#20211F" stroke-width="2.5"/>
+      <path d="M170 178 C170 158, 250 158, 250 178" fill="none" stroke="#20211F" stroke-width="2.5"/>
+      <rect x="200" y="140" width="20" height="14" rx="3" fill="none" stroke="#20211F" stroke-width="2.5"/>
+      <!-- gooseneck spout -->
+      <path d="M280 210 C 330 205, 345 175, 335 140 C 328 112, 300 95, 300 70"
+            fill="none" stroke="#B5652D" stroke-width="4" stroke-linecap="round"/>
+      <!-- handle -->
+      <path d="M150 230 C 90 235, 85 300, 130 330 C 150 344, 165 340, 170 328"
+            fill="none" stroke="#20211F" stroke-width="2.5" stroke-linecap="round"/>
+      <!-- base -->
+      <ellipse cx="210" cy="398" rx="55" ry="10" fill="none" stroke="#20211F" stroke-width="2.5"/>
+      <!-- pour stream -->
+      <path d="M300 70 C 298 92, 296 112, 294 130" stroke="#B5652D" stroke-width="1.5" stroke-dasharray="1 6" stroke-linecap="round"/>
+    </svg>
+  </div>
+</header>
+
+<div class="strip">
+  <div class="wrap">
+    <span>0.9L capacity</span>
+    <span>Variable-temperature base, 40–100°C</span>
+    <span>Matte stainless + copper spout</span>
+    <span>2-year warranty</span>
+  </div>
+</div>
+
+<section id="control" class="wrap">
+  <div class="section-head">
+    <h2>Set the temperature, forget the thermometer</h2>
+    <p>Different beans want different heat. Kestrel holds yours steady through the whole pour.</p>
+  </div>
+  <div class="control-grid">
+    <div class="dial-wrap">
+      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="100" cy="100" r="88" fill="none" stroke="#D8D3C4" stroke-width="1.5"/>
+        <circle cx="100" cy="100" r="88" fill="none" stroke="#B5652D" stroke-width="3"
+                stroke-dasharray="415" stroke-dashoffset="110" stroke-linecap="round"
+                transform="rotate(-90 100 100)"/>
+        <text x="100" y="96" text-anchor="middle" font-family="Fraunces, serif" font-size="34" fill="#20211F">96°</text>
+        <text x="100" y="120" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="#5B5B54">light roast</text>
+      </svg>
+    </div>
+    <ul class="feature-list">
+      <li>
+        <div class="val">±1°</div>
+        <div class="desc">
+          <h3>Held, not just reached</h3>
+          <p>The base keeps water at your set point for up to 20 minutes, so a slow pour doesn't mean a cooling one.</p>
+        </div>
+      </li>
+      <li>
+        <div class="val">0.5mm</div>
+        <div class="desc">
+          <h3>Spout opening</h3>
+          <p>Narrow enough for a thin, controllable stream — the difference between a bloom that blooms evenly and one that doesn't.</p>
+        </div>
+      </li>
+      <li>
+        <div class="val">6</div>
+        <div class="desc">
+          <h3>Saved presets</h3>
+          <p>Store your go-to temperatures for light roasts, dark roasts, tea, and anything else you pour hot water over.</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section id="craft" class="craft">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Built to be handled daily</h2>
+      <p>Every part chosen for what it does under real use, not just on a shelf.</p>
+    </div>
+    <div class="craft-grid">
+      <div class="craft-cell">
+        <span class="num">Body</span>
+        <h3>18/8 stainless</h3>
+        <p>Won't pit, rust, or hold onto flavors from yesterday's pour. Matte finish resists fingerprints.</p>
+      </div>
+      <div class="craft-cell">
+        <span class="num">Handle</span>
+        <h3>Stays cool</h3>
+        <p>A double-wall grip stays comfortable to hold even a few minutes after the kettle comes off the base.</p>
+      </div>
+      <div class="craft-cell">
+        <span class="num">Base</span>
+        <h3>No cord in the way</h3>
+        <p>Cordless kettle lifts straight off a powered base, so nothing pulls at your hand mid-pour.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="specs" class="wrap tight">
+  <div class="section-head">
+    <h2>Specifications</h2>
+    <p>What's in the box, and what it's made of.</p>
+  </div>
+  <table class="specs">
+    <tr><td>Capacity</td><td>0.9 L (min fill 0.4 L)</td></tr>
+    <tr><td>Temperature range</td><td>40°C – 100°C, adjustable in 1° steps</td></tr>
+    <tr><td>Power</td><td>1000W base, 100–240V</td></tr>
+    <tr><td>Materials</td><td>Stainless steel body, copper-plated spout, heat-resistant handle</td></tr>
+    <tr><td>Weight</td><td>720g (kettle only)</td></tr>
+    <tr><td>In the box</td><td>Kettle, power base, quick-start card</td></tr>
+    <tr><td>Warranty</td><td>2 years, parts and base</td></tr>
+  </table>
+</section>
+
+<section id="buy" class="wrap closing">
+  <div class="closing-row">
+    <h2>Your next pour starts here.</h2>
+    <div>
+      <a class="btn-primary" href="#">Add to cart — $128</a>
+      <div class="price-note" style="margin-top:10px;">Free shipping · 2-day delivery</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>Kestrel</span>
+    <span>© 2026 Kestrel Goods</span>
+  </div>
+</footer>
+
+</body>
+</html>
