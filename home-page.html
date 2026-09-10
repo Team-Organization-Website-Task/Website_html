@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduPro - Learn Anything, Anywhere</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        .hero-section {
+            background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
+        }
+        .course-card:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.12) !important;
+        }
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary fs-4" href="#">
+                <i class="bi bi-mortarboard-fill me-2"></i>EduPro
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#courses">Courses</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+                </ul>
+                <form class="d-flex me-3" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search courses..." aria-label="Search">
+                </form>
+                <div class="d-flex gap-2">
+                    <a href="#" class="btn btn-outline-primary">Log In</a>
+                    <a href="#" class="btn btn-primary">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section text-white py-5">
+        <div class="container py-5">
+            <div class="row align-items-center gy-4">
+                <div class="col-lg-6">
+                    <span class="badge bg-light text-primary px-3 py-2 rounded-pill mb-3 fw-semibold">🚀 Start Learning Today</span>
+                    <h1 class="display-4 fw-bold mb-3">Master New Skills with Industry Experts</h1>
+                    <p class="lead text-white-50 mb-4">Access over 5,000+ online courses in coding, business, design, and marketing from world-class instructors.</p>
+                    <div class="d-flex gap-3 flex-wrap">
+                        <a href="#courses" class="btn btn-light btn-lg text-primary fw-semibold px-4">Explore Courses</a>
+                        <a href="#" class="btn btn-outline-light btn-lg px-4">Become an Instructor</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80" class="img-fluid rounded-4 shadow-lg" alt="Students Learning">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Counter -->
+    <section class="bg-light py-4 border-bottom">
+        <div class="container">
+            <div class="row text-center gy-3">
+                <div class="col-md-3 col-6">
+                    <h3 class="fw-bold text-primary mb-0">10K+</h3>
+                    <p class="text-muted mb-0">Online Courses</p>
+                </div>
+                <div class="col-md-3 col-6">
+                    <h3 class="fw-bold text-primary mb-0">500K+</h3>
+                    <p class="text-muted mb-0">Active Students</p>
+                </div>
+                <div class="col-md-3 col-6">
+                    <h3 class="fw-bold text-primary mb-0">1.2K+</h3>
+                    <p class="text-muted mb-0">Expert Instructors</p>
+                </div>
+                <div class="col-md-3 col-6">
+                    <h3 class="fw-bold text-primary mb-0">98%</h3>
+                    <p class="text-muted mb-0">Satisfaction Rate</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-5">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Why Choose EduPro?</h2>
+                <p class="text-muted">Designed to help you reach your educational and career goals smoothly.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm text-center p-4">
+                        <div class="feature-icon bg-primary-subtle text-primary rounded-circle mx-auto mb-3">
+                            <i class="bi bi-laptop fs-3"></i>
+                        </div>
+                        <h5 class="fw-bold">Flexible Online Learning</h5>
+                        <p class="text-muted mb-0">Learn at your own pace from anywhere in the world on mobile or desktop devices.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm text-center p-4">
+                        <div class="feature-icon bg-success-subtle text-success rounded-circle mx-auto mb-3">
+                            <i class="bi bi-person-video3 fs-3"></i>
+                        </div>
+                        <h5 class="fw-bold">Expert Instructors</h5>
+                        <p class="text-muted mb-0">Gain insights and real-world skills from leading professionals and industry experts.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm text-center p-4">
+                        <div class="feature-icon bg-warning-subtle text-warning rounded-circle mx-auto mb-3">
+                            <i class="bi bi-award fs-3"></i>
+                        </div>
+                        <h5 class="fw-bold">Verified Certificates</h5>
+                        <p class="text-muted mb-0">Earn recognized certificates to share with potential employers and add to LinkedIn.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Courses Section -->
+    <section id="courses" class="bg-light py-5">
+        <div class="container py-4">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <div>
+                    <h2 class="fw-bold mb-1">Popular Courses</h2>
+                    <p class="text-muted mb-0">Explore our most in-demand learning programs</p>
+                </div>
+                <a href="#" class="btn btn-outline-primary d-none d-md-inline-block">View All Courses</a>
+            </div>
+
+            <div class="row g-4">
+                <!-- Course 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 border-0 shadow-sm course-card">
+                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Web Development">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="badge bg-primary-subtle text-primary">Development</span>
+                                <span class="text-warning small"><i class="bi bi-star-fill"></i> 4.8 (1.2k)</span>
+                            </div>
+                            <h5 class="card-title fw-bold">Full-Stack Web Development Bootcamp</h5>
+                            <p class="card-text text-muted small">Learn HTML, CSS, JavaScript, React, Node.js and build real projects.</p>
+                            <hr>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h5 fw-bold text-primary mb-0">$49.99</span>
+                                <a href="#" class="btn btn-sm btn-primary">Enroll Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 border-0 shadow-sm course-card">
+                        <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="UI/UX Design">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="badge bg-success-subtle text-success">Design</span>
+                                <span class="text-warning small"><i class="bi bi-star-fill"></i> 4.9 (850)</span>
+                            </div>
+                            <h5 class="card-title fw-bold">UI/UX Design Masterclass 2026</h5>
+                            <p class="card-text text-muted small">Master Figma, user research, wireframing, and interactive prototyping.</p>
+                            <hr>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h5 fw-bold text-primary mb-0">$39.99</span>
+                                <a href="#" class="btn btn-sm btn-primary">Enroll Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 3 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 border-0 shadow-sm course-card">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Digital Marketing">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="badge bg-warning-subtle text-warning-emphasis">Business</span>
+                                <span class="text-warning small"><i class="bi bi-star-fill"></i> 4.7 (2.1k)</span>
+                            </div>
+                            <h5 class="card-title fw-bold">Digital Marketing & SEO Strategy</h5>
+                            <p class="card-text text-muted small">Drive traffic, boost conversions, and master Google & Social Media ads.</p>
+                            <hr>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h5 fw-bold text-primary mb-0">$29.99</span>
+                                <a href="#" class="btn btn-sm btn-primary">Enroll Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-4 d-md-none">
+                <a href="#" class="btn btn-outline-primary">View All Courses</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action (CTA) Section -->
+    <section class="py-5 bg-primary text-white">
+        <div class="container text-center py-4">
+            <h2 class="fw-bold mb-3">Ready to Start Learning?</h2>
+            <p class="lead mb-4">Join thousands of students and accelerate your career today.</p>
+            <a href="#" class="btn btn-light btn-lg text-primary fw-semibold px-4">Get Started For Free</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white-50 py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="text-white fw-bold mb-3"><i class="bi bi-mortarboard-fill me-2"></i>EduPro</h5>
+                    <p class="small">Empowering learners worldwide through quality education, interactive courses, and expert mentorship.</p>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="text-white fw-bold mb-3">Quick Links</h6>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">About Us</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Courses</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Instructors</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="text-white fw-bold mb-3">Categories</h6>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Development</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Design</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Marketing</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Data Science</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h6 class="text-white fw-bold mb-3">Subscribe to Newsletter</h6>
+                    <p class="small">Get the latest course updates and offers directly to your inbox.</p>
+                    <div class="input-group">
+                        <input type="email" class="form-control" placeholder="Enter your email">
+                        <button class="btn btn-primary" type="button">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="border-secondary my-4">
+            <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center small">
+                <p class="mb-0">&copy; 2026 EduPro. All rights reserved.</p>
+                <div class="d-flex gap-3 fs-5 mt-2 mt-sm-0">
+                    <a href="#" class="text-white-50"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="text-white-50"><i class="bi bi-twitter-x"></i></a>
+                    <a href="#" class="text-white-50"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" class="text-white-50"><i class="bi bi-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
