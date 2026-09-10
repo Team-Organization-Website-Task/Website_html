@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Full-Stack Web Development Bootcamp | EduPro</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+	<style>
+		:root {
+			--ink: #172033;
+			--muted: #687386;
+			--blue: #1769e0;
+			--cream: #f7f8fb;
+			--line: #e7eaf0;
+		}
+
+		body { color: var(--ink); background: #fff; }
+		.navbar-brand { letter-spacing: -.03em; }
+		.course-hero { background: #111c31; color: #fff; }
+		.eyebrow { color: #86b7ff; letter-spacing: .12em; font-size: .74rem; font-weight: 700; text-transform: uppercase; }
+		.hero-copy { max-width: 730px; }
+		.hero-copy h1 { letter-spacing: -.04em; line-height: 1.06; }
+		.rating { color: #ffc857; }
+		.hero-meta { color: #b9c5d9; }
+		.enrollment-card { margin-top: -86px; position: relative; z-index: 2; }
+		.enrollment-card .card-body { padding: 1.5rem; }
+		.course-cover { aspect-ratio: 16 / 9; object-fit: cover; }
+		.price { font-size: 2rem; letter-spacing: -.04em; }
+		.btn-enroll { background: #f25c54; border-color: #f25c54; color: #fff; }
+		.btn-enroll:hover { background: #db4942; border-color: #db4942; color: #fff; }
+		.section-label { color: var(--blue); font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; font-weight: 700; }
+		.learning-list { list-style: none; padding: 0; }
+		.learning-list li { display: flex; gap: .7rem; margin-bottom: .8rem; color: #485365; }
+		.learning-list i { color: #198754; margin-top: .15rem; }
+		.curriculum .accordion-button { font-weight: 600; color: var(--ink); }
+		.curriculum .accordion-button:not(.collapsed) { color: var(--blue); background: #f3f7ff; box-shadow: none; }
+		.curriculum .accordion-item { border: 1px solid var(--line); margin-bottom: .7rem; border-radius: .5rem; overflow: hidden; }
+		.curriculum .accordion-body { padding-top: .25rem; }
+		.lesson { display: flex; justify-content: space-between; gap: 1rem; padding: .55rem 0; color: var(--muted); font-size: .92rem; }
+		.lesson i { color: var(--blue); margin-right: .45rem; }
+		.instructor-avatar { width: 76px; height: 76px; object-fit: cover; }
+		.stat { border-left: 1px solid var(--line); }
+		.stat:first-child { border-left: 0; }
+		footer a:hover { color: #fff !important; }
+		@media (max-width: 991.98px) { .enrollment-card { margin-top: 1.5rem; } }
+	</style>
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top">
+		<div class="container py-2">
+			<a class="navbar-brand fw-bold text-primary fs-4" href="home-page.html"><i class="bi bi-mortarboard-fill me-2"></i>EduPro</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+			<div class="collapse navbar-collapse" id="mainNav">
+				<ul class="navbar-nav me-auto ms-lg-4">
+					<li class="nav-item"><a class="nav-link" href="home-page.html">Home</a></li>
+					<li class="nav-item"><a class="nav-link active" href="home-page.html#courses">Courses</a></li>
+					<li class="nav-item"><a class="nav-link" href="#instructor">Instructors</a></li>
+				</ul>
+				<form class="d-flex me-lg-3 my-3 my-lg-0" role="search">
+					<input class="form-control" type="search" placeholder="Search courses..." aria-label="Search courses">
+				</form>
+				<a href="#" class="btn btn-outline-primary me-2">Log In</a>
+				<a href="#" class="btn btn-primary">Sign Up</a>
+			</div>
+		</div>
+	</nav>
+
+	<header class="course-hero py-5">
+		<div class="container py-lg-5">
+			<div class="hero-copy">
+				<div class="eyebrow mb-3">Development / Web Development</div>
+				<h1 class="display-4 fw-bold mb-3">Full-Stack Web Development Bootcamp</h1>
+				<p class="lead mb-4">Build modern, production-ready websites and applications from the ground up with HTML, CSS, JavaScript, React, and Node.js.</p>
+				<div class="d-flex flex-wrap align-items-center gap-3 mb-4">
+					<span class="rating"><i class="bi bi-star-fill"></i> 4.8</span>
+					<span class="hero-meta">(1,248 ratings)</span>
+					<span class="hero-meta"><i class="bi bi-people me-1"></i> 18,420 students</span>
+				</div>
+				<p class="hero-meta mb-0">Created by <a href="#instructor" class="text-white fw-semibold">Maya Thompson</a> <span class="mx-2">&middot;</span> Last updated August 2026</p>
+			</div>
+		</div>
+	</header>
+
+	<main>
+		<div class="container">
+			<div class="row g-5">
+				<div class="col-lg-8">
+					<div class="card border-0 shadow-lg enrollment-card d-lg-none">
+						<img class="card-img-top course-cover" src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1000&q=85" alt="Code on a laptop screen">
+						<div class="card-body"><a href="#enroll" class="btn btn-enroll w-100 fw-semibold">Enroll now</a></div>
+					</div>
+
+					<section class="py-5" id="overview">
+						<div class="section-label mb-2">Course overview</div>
+						<h2 class="fw-bold mb-3">Everything you need to ship your first app</h2>
+						<p class="text-secondary">This practical bootcamp takes you from your first line of code to deploying a complete full-stack application. You will learn by building, with clear explanations, guided projects, and challenges that mirror real development work.</p>
+						<div class="row g-3 mt-2">
+							<div class="col-sm-6"><div class="border rounded-3 p-3 h-100"><strong><i class="bi bi-clock text-primary me-2"></i>42 hours</strong><div class="small text-secondary mt-1">On-demand video lessons</div></div></div>
+							<div class="col-sm-6"><div class="border rounded-3 p-3 h-100"><strong><i class="bi bi-bar-chart text-primary me-2"></i>Beginner friendly</strong><div class="small text-secondary mt-1">No previous experience required</div></div></div>
+						</div>
+					</section>
+
+					<section class="pb-5">
+						<div class="section-label mb-2">What you will learn</div>
+						<h2 class="fw-bold mb-3">Skills that move with you</h2>
+						<div class="row">
+							<div class="col-md-6"><ul class="learning-list"><li><i class="bi bi-check-circle-fill"></i><span>Build responsive interfaces with semantic HTML and modern CSS</span></li><li><i class="bi bi-check-circle-fill"></i><span>Write clean, confident JavaScript using ES6+ features</span></li><li><i class="bi bi-check-circle-fill"></i><span>Create reusable React components and manage application state</span></li></ul></div>
+							<div class="col-md-6"><ul class="learning-list"><li><i class="bi bi-check-circle-fill"></i><span>Design APIs and server-side applications with Node.js</span></li><li><i class="bi bi-check-circle-fill"></i><span>Store, query, and protect application data</span></li><li><i class="bi bi-check-circle-fill"></i><span>Deploy a finished project and share it with the world</span></li></ul></div>
+						</div>
+					</section>
+
+					<section class="curriculum pb-5" id="curriculum">
+						<div class="d-flex justify-content-between align-items-end mb-3"><div><div class="section-label mb-2">Course content</div><h2 class="fw-bold mb-0">Learn by building</h2></div><span class="text-secondary small">8 sections &middot; 64 lessons</span></div>
+						<div class="accordion" id="courseAccordion">
+							<div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#moduleOne"><span class="me-auto">1. The modern web development toolkit</span><small class="text-secondary me-3">8 lessons &middot; 3h 20m</small></button></h3><div id="moduleOne" class="accordion-collapse collapse show" data-bs-parent="#courseAccordion"><div class="accordion-body"><div class="lesson"><span><i class="bi bi-play-circle"></i>Welcome to the bootcamp</span><span>08:12</span></div><div class="lesson"><span><i class="bi bi-play-circle"></i>How the web works</span><span>18:45</span></div><div class="lesson"><span><i class="bi bi-file-earmark-text"></i>Set up your developer workspace</span><span>24:10</span></div></div></div></div>
+							<div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#moduleTwo"><span class="me-auto">2. HTML and CSS: interfaces that communicate</span><small class="text-secondary me-3">10 lessons &middot; 5h 10m</small></button></h3><div id="moduleTwo" class="accordion-collapse collapse" data-bs-parent="#courseAccordion"><div class="accordion-body"><div class="lesson"><span><i class="bi bi-play-circle"></i>Structure pages with semantic HTML</span><span>31:06</span></div><div class="lesson"><span><i class="bi bi-play-circle"></i>Responsive layouts with Flexbox and Grid</span><span>42:18</span></div></div></div></div>
+							<div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#moduleThree"><span class="me-auto">3. JavaScript: from syntax to interaction</span><small class="text-secondary me-3">12 lessons &middot; 7h 40m</small></button></h3><div id="moduleThree" class="accordion-collapse collapse" data-bs-parent="#courseAccordion"><div class="accordion-body"><div class="lesson"><span><i class="bi bi-lock"></i>Variables, functions, and control flow</span><span>Preview</span></div><div class="lesson"><span><i class="bi bi-lock"></i>Events, forms, and asynchronous code</span><span>Premium</span></div></div></div></div>
+							<div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#moduleFour"><span class="me-auto">4. React, APIs, and your capstone project</span><small class="text-secondary me-3">34 lessons &middot; 26h 00m</small></button></h3><div id="moduleFour" class="accordion-collapse collapse" data-bs-parent="#courseAccordion"><div class="accordion-body"><p class="text-secondary mb-0">Build and deploy a complete application while applying everything you have learned.</p></div></div></div>
+						</div>
+					</section>
+
+					<section class="border-top py-5" id="instructor">
+						<div class="section-label mb-2">Your instructor</div>
+						<div class="d-flex gap-3 align-items-start"><img class="instructor-avatar rounded-circle" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80" alt="Maya Thompson"><div><h3 class="h4 fw-bold mb-1">Maya Thompson</h3><p class="text-primary mb-2">Senior Product Engineer &middot; 12 years in tech</p><p class="text-secondary mb-0">Maya has helped teams at growing technology companies turn complex ideas into simple, useful products. Her lessons are practical, direct, and grounded in the work developers do every day.</p></div></div>
+					</section>
+				</div>
+
+				<aside class="col-lg-4">
+					<div class="card border-0 shadow-lg enrollment-card d-none d-lg-block" id="enroll">
+						<img class="card-img-top course-cover" src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1000&q=85" alt="Code on a laptop screen">
+						<div class="card-body">
+							<div class="price fw-bold mb-2">$49.99</div><p class="text-secondary small">Lifetime access to all course materials</p>
+							<a href="#" class="btn btn-enroll btn-lg w-100 fw-semibold mb-3">Enroll now</a>
+							<p class="text-center small text-secondary mb-4"><i class="bi bi-shield-check text-success me-1"></i>30-day money-back guarantee</p>
+							<h3 class="h6 fw-bold">This course includes:</h3>
+							<ul class="list-unstyled small text-secondary mb-0"><li class="mb-2"><i class="bi bi-play-btn me-2 text-primary"></i>42 hours of on-demand video</li><li class="mb-2"><i class="bi bi-code-square me-2 text-primary"></i>14 hands-on projects</li><li class="mb-2"><i class="bi bi-phone me-2 text-primary"></i>Access on mobile and desktop</li><li><i class="bi bi-award me-2 text-primary"></i>Certificate of completion</li></ul>
+						</div>
+					</div>
+				</aside>
+			</div>
+		</div>
+	</main>
+
+	<footer class="bg-dark text-white-50 py-4 mt-5"><div class="container d-flex flex-column flex-sm-row justify-content-between gap-2"><span><i class="bi bi-mortarboard-fill me-2 text-primary"></i><strong class="text-white">EduPro</strong> &copy; 2026</span><span>Learn something useful today.</span></div></footer>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
